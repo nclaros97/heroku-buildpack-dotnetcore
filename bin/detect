@@ -69,9 +69,11 @@ else
 
 		$(ls "$BP_DIR")
 
+		LS BP DIR2/bin
 		$(ls "$(cd $BP_DIR2/bin)")
 
-		$(ls "$P_2")
+		LS P_D
+		$(ls "$P_D")
 		Application not supported by this buildpack!
 
 		The ASP.NET Core buildpack is set on this application, but was unable to detect
