@@ -4,8 +4,8 @@
 
 BP_DIR=$(cd $(dirname ${0:-}); cd ..; pwd)
 BP_DIR2=$(cd $(dirname ${1:-}))
-print(BP_DIR)
-print(BP_DIR2)
+echo BP_DIR
+echo BP_DIR2
 ### Load dependencies
 
 # shellcheck source=util/common.sh
