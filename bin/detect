@@ -3,7 +3,7 @@
 ### Configure directories
 
 BP_DIR=$(cd $(dirname ${0:-}); cd ..; pwd)
-PROJECT_DIR= $(cd $1; pwd) 
+PROJECT_DIR= $(cd $1) 
 ### Load dependencies
 
 # shellcheck source=util/common.sh
