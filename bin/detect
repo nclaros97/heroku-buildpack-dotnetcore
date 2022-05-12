@@ -68,7 +68,7 @@ else
 		the top level directory. 
 
 		This directory has the following files:
-		$(ls -1p "$1")
+		$(ls "$1")
 
 		If you are trying to deploy an application written in another language, you need
 		to change the list of buildpacks set on your Heroku app using the 'heroku buildpacks'
