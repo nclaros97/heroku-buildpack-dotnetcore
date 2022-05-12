@@ -53,6 +53,12 @@ else
 		project_name="*"
 	fi
 	error <<-EOF
+
+		D1
+		$BP_DIR
+		
+		D2
+		$BP_DIR2
 		Application not supported by this buildpack!
 
 		The ASP.NET Core buildpack is set on this application, but was unable to detect
