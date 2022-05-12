@@ -56,9 +56,11 @@ else
 		$(dirname ${1:-})
 
 		$(dirname $1)
-		
+
 		$PROJECT_DIR
 		$(ls "$PROJECT_DIR")
+
+		$(ls "$(dirname $1)")
 
 		Application not supported by this buildpack!
 
