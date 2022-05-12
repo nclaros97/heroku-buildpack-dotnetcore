@@ -3,7 +3,7 @@
 ### Configure directories
 
 BP_DIR=$(cd $(dirname ${0:-}); cd ..; pwd)
-BP_DIR2=$(cd $(dirname ${1:-}))
+BP_DIR2=$(cd $(dirname ${0:-}))
 
 ### Load dependencies
 
