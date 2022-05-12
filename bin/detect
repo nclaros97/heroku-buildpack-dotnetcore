@@ -52,6 +52,8 @@ else
 	fi
 	error <<-EOF
 
+		$(ls "$PROJECT_DIR")
+
 		Application not supported by this buildpack!
 
 		The ASP.NET Core buildpack is set on this application, but was unable to detect
