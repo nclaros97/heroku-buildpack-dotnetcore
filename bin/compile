@@ -52,7 +52,7 @@ framework_version="$(get_framework_version $BUILD_DIR)"
 print "The .net core framework version: ${framework_version}"
 
 runtime_framework_version="$(get_runtime_framework_version $BUILD_DIR)"
-print "BUILD DIR: $(ls "$BUILD_DIR") "
+print "BUILD DIR: $(ls "$BUILD_DIR/AuthApp") "
 print "The dotnet sdk version: ${runtime_framework_version} to be installed"
 
 # Skip TELEMETRY_OPTOUT on production environment
