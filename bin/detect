@@ -62,7 +62,7 @@ else
 		$BP_DIR2
 
 		P_D
-		$P_D
+		$PROJECT_DIR
 
 		0
 		$0
@@ -73,7 +73,10 @@ else
 		$(ls "$(cd $BP_DIR2/bin)")
 
 		LS P_D
-		$(ls "$P_D")
+		$(ls "$PROJECT_DIR")
+
+		PN
+		$project_name
 		Application not supported by this buildpack!
 
 		The ASP.NET Core buildpack is set on this application, but was unable to detect
