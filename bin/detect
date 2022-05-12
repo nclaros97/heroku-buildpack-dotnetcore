@@ -19,7 +19,7 @@ declare project_name
 # Get project name
 project_name="$(get_project_name $PROJECT_DIR)"
 
-if [[ -f "$1/$project_name.csproj" && -f "$PROJECT_DIR/Startup.cs" && -f "$PROJECT_DIR/Program.cs" ]]; then
+if [[ -f "$PROJECT_DIR/$project_name.csproj" && -f "$PROJECT_DIR/Startup.cs" && -f "$PROJECT_DIR/Program.cs" ]]; then
 	declare herokuos_version framework_version
 	
 	# Get OS version
