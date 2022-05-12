@@ -61,6 +61,9 @@ else
 		P_DIR
 		$(ls "$PROJECT_DIR")
 
+		PPR
+		$(ls "$PRRR")
+
 		Application not supported by this buildpack!
 
 		The ASP.NET Core buildpack is set on this application, but was unable to detect
