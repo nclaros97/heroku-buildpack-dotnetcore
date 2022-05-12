@@ -13,7 +13,7 @@ unset GIT_DIR     # Avoid GIT_DIR leak from previous build steps
 ### Configure directories
 BASE_DIR="$(pwd)"
 BUILD_DIR=${1:-}
-CUSTOM_BUILD_DIR = $BUILD_DIR/AuthApp
+CUSTOM_BUILD_DIR= $BUILD_DIR/AuthApp
 CACHE_DIR=${2:-}
 ENV_DIR=${3:-}
 BP_DIR=$(cd $(dirname ${0:-}); cd ..; pwd)
@@ -48,7 +48,7 @@ else
 fi
 
 # Get .net core framework version
-
+print $(ls $CUSTOM_BUILD_DIR)
 framework_version="$(get_framework_version $CUSTOM_BUILD_DIR)"
 print "The .net core framework version: ${framework_version}"
 
