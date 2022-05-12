@@ -16,8 +16,8 @@ declare project_name
 
 # Get project name
 project_name="$(get_project_name $1)"
-echo ($BP_DIR)
-echo ($BP_DIR2)
+echo $BP_DIR
+echo $BP_DIR2
 if [[ -f "$1/$project_name.csproj" && -f "$1/Startup.cs" && -f "$1/Program.cs" ]]; then
 	declare herokuos_version framework_version
 	
@@ -56,7 +56,7 @@ else
 
 		D1
 		$BP_DIR
-		
+
 		D2
 		$BP_DIR2
 		Application not supported by this buildpack!
