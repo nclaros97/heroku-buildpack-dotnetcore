@@ -3,7 +3,7 @@
 ### Configure directories
 
 BP_DIR=$(cd $(dirname ${0:-}); cd ..; pwd)
-PROJECT_DIR= $(cd $1/AuthApp) 
+PROJECT_DIR= $(cd $1/build_814dd97b) 
 ### Load dependencies
 
 # shellcheck source=util/common.sh
