@@ -50,6 +50,7 @@ else
 	if [[ ${#project_name} -eq 0 ]]; then
 		project_name="*"
 	fi
+	echo project_name
 	error <<-EOF
 		Application not supported by this buildpack!
 
