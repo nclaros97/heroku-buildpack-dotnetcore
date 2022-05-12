@@ -130,8 +130,9 @@ get_framework_version() {
 # input - $1
 get_runtime_framework_version() {
 	local runtime_framework_version=$(grep -oPm1 "(?<=<RuntimeFrameworkVersion>)[^<]+" $1/*.csproj)
+	print $1
 	if [[ ${#runtime_framework_version} -eq 0 ]]; then
-		echo "v6.0.5"
+		echo "6.0.5"
 	else
 		echo "${runtime_framework_version//[a-z]/}"
 	fi
