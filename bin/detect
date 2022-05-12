@@ -3,7 +3,7 @@
 ### Configure directories
 
 BP_DIR=$(cd $(dirname ${0:-}); cd ..; pwd)
-
+PRRR = $(cd $1/AuthApp)
 ### Load dependencies
 
 # shellcheck source=util/common.sh
@@ -53,8 +53,7 @@ else
 	fi
 	echo project_name
 	error <<-EOF
-		Nombre: $project_name
-		App Nombre = $1
+		dir $(ls $PRRR)
 		Application not supported by this buildpack!
 
 		The ASP.NET Core buildpack is set on this application, but was unable to detect
@@ -69,7 +68,6 @@ else
 
 		This directory has the following files:
 		$(ls "$1")
-		$(cd "$1..")
 
 		If you are trying to deploy an application written in another language, you need
 		to change the list of buildpacks set on your Heroku app using the 'heroku buildpacks'
