@@ -3,9 +3,9 @@
 ### Configure directories
 
 BP_DIR=$(cd $(dirname ${0:-}); cd ..; pwd)
-BP_DIR2=$(cd $(dirname ${1:-}); cd ..; pwd)
+BP_DIR2=$(cd $(dirname ${1:-}); cd; pwd)
 
-P_D=$(cd $(dirname $1; cd; pwd))
+P_D="$1/AuthApp"
 
 ### Load dependencies
 
@@ -61,8 +61,11 @@ else
 		D2
 		$BP_DIR2
 
-		PD
+		P_D
 		$P_D
+
+		0
+		$0
 
 		$(ls "$BP_DIR")
 
