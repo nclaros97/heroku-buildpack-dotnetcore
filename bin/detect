@@ -61,6 +61,9 @@ else
 		D2
 		$BP_DIR2
 
+		PD
+		$P_D
+
 		$(ls "$BP_DIR")
 
 		$(ls "$BP_DIR2")
