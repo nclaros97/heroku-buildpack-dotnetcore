@@ -2,8 +2,10 @@
 
 ### Configure directories
 
-BP_DIR=$(cd $(dirname ${0:-}); pwd)
+BP_DIR=$(cd $(dirname ${0:-}); cd ..; pwd)
 BP_DIR2=$(cd $(dirname ${1:-}); cd ..; pwd)
+
+P_D=$(cd $(dirname $1; cd; pwd))
 
 ### Load dependencies
 
