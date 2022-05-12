@@ -827,7 +827,7 @@ bin_folder_relative_path=""
 temporary_file_template="${TMPDIR:-/tmp}/dotnet.XXXXXXXXX"
 
 channel="LTS"
-version="6.0.0"
+version="v6.0.5"
 install_dir="<auto>"
 architecture="<auto>"
 dry_run=false
