@@ -130,9 +130,6 @@ get_framework_version() {
 # input - $1
 get_runtime_framework_version() {
 	local runtime_framework_version=$(grep -oPm1 "(?<=<RuntimeFrameworkVersion>)[^<]+" $1/AuthApp/*.csproj)
-	print $runtime_framework_version
-
-	print $1/AuthApp/*.csproj
 	if [[ ${#runtime_framework_version} -eq 0 ]]; then
 		echo "6.0.5"
 	else
