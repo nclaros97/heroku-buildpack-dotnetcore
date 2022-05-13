@@ -48,7 +48,6 @@ else
 fi
 
 # Get .net core framework version
-print $(ls $CUSTOM_BUILD_DIR)
 framework_version="$(get_framework_version $CUSTOM_BUILD_DIR)"
 print "The .net core framework version: ${framework_version}"
 
