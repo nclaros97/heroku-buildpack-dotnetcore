@@ -14,7 +14,6 @@ unset GIT_DIR     # Avoid GIT_DIR leak from previous build steps
 BASE_DIR="$(pwd)"
 BUILD_DIR=${1:-}
 CUSTOM_BUILD_DIR="$BUILD_DIR/AuthApp"
-BUILD_DIR="$CUSTOM_BUILD_DIR"
 CACHE_DIR=${2:-}
 ENV_DIR=${3:-}
 BP_DIR=$(cd $(dirname ${0:-}); cd ..; pwd)
@@ -90,10 +89,10 @@ echo "export DOTNET_CLI_TELEMETRY_OPTOUT=1" >> $PROFILE_PATH
 #echo "export IS_POSTGRES_USED=\"$(is_postgres_used $BUILD_DIR)\"" >> $PROFILE_PATH
 
 # Get project file from build directory
-PROJECT_FILE="$(get_project_file $BUILD_DIR)"
+PROJECT_FILE="$(get_project_file $CUSTOM_BUILD_DIR)"
 
 # Get app assembly name from project file
-APP_ASSEMBLY="$(get_project_name $BUILD_DIR)"
+APP_ASSEMBLY="$(get_project_name $CUSTOM_BUILD_DIR)"
 echo "export APP_ASSEMBLY=\"$(get_project_name $BUILD_DIR)\"" >> $PROFILE_PATH
 
 cd $BUILD_DIR
